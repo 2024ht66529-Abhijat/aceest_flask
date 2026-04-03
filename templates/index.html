@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ACEest Fitness</title>
+    <title>ACEest Fitness v2.0.1</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
@@ -15,8 +15,13 @@
 </select>
 <button type="submit">View Program</button>
 </form>
-{% if selected %}
-<div class="card">{{selected}}</div>
+{% if details %}
+<div class="card">
+<h3>Workout</h3>
+<p>{{details.workout}}</p>
+<h3>Diet</h3>
+<p>{{details.diet}}</p>
+</div>
 {% endif %}
 </div>
 </body>
