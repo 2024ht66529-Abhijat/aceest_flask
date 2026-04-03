@@ -4,16 +4,16 @@ routes = Blueprint('routes', __name__)
 
 PROGRAMS = {
     'Fat Loss (FL)': {
-        'workout': 'Adaptive fat‑loss training (cardio + strength, autoregulated)',
-        'diet': 'Flexible calorie deficit with weekly adjustments'
+        'workout': 'Phase-based fat loss training with conditioning and strength',
+        'diet': 'Calorie cycling with adaptive weekly deficit'
     },
     'Muscle Gain (MG)': {
-        'workout': 'Advanced hypertrophy with volume cycling and progression',
-        'diet': 'Lean bulk nutrition with macro tracking'
+        'workout': 'Volume and intensity periodized hypertrophy programming',
+        'diet': 'Lean bulk strategy with macro tracking'
     },
     'Athletic Performance (AP)': {
-        'workout': 'Speed, power, and conditioning blocks',
-        'diet': 'Performance‑based fueling plan'
+        'workout': 'Speed, agility, power and conditioning microcycles',
+        'diet': 'Performance-oriented fueling and recovery nutrition'
     }
 }
 
