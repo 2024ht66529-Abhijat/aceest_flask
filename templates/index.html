@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ACEest Fitness v3.1.2</title>
-  <link rel="stylesheet" href="/static/style.css">
+    <title>ACEest Fitness 3.2.4</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-<div class="container">
-<h1>ACEest Fitness & Performance</h1>
-<form method="post">
-<select name="program">
-{% for p in programs %}<option value="{{p}}">{{p}}</option>{% endfor %}
-</select>
-<button type="submit">View Program</button>
-</form>
-{% if selected %}
-<div class="card">
-<h3>Workout Plan</h3><p>{{selected.workout}}</p>
-<h3>Nutrition Plan</h3><p>{{selected.diet}}</p>
-</div>
-{% endif %}
+<div class="window">
+  <div class="titlebar">ACEest Fitness & Gym</div>
+  <div class="content">
+    <form method="post">
+      <label>Select Training Program</label>
+      <select name="program">
+      {% for p in programs %}<option>{{p}}</option>{% endfor %}
+      </select>
+      <button type="submit">Apply</button>
+    </form>
+    {% if selected %}
+    <div class="result">{{selected.desc}}</div>
+    {% endif %}
+  </div>
 </div>
 </body>
 </html>

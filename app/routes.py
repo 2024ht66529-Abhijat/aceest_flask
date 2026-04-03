@@ -1,20 +1,10 @@
 from flask import Blueprint, render_template, request
-
 routes = Blueprint('routes', __name__)
 
 PROGRAMS = {
-    'Fat Loss (FL)': {
-        'workout': 'Phase-based fat loss training with conditioning and strength',
-        'diet': 'Calorie cycling with adaptive weekly deficit'
-    },
-    'Muscle Gain (MG)': {
-        'workout': 'Volume and intensity periodized hypertrophy programming',
-        'diet': 'Lean bulk strategy with macro tracking'
-    },
-    'Athletic Performance (AP)': {
-        'workout': 'Speed, agility, power and conditioning microcycles',
-        'diet': 'Performance-oriented fueling and recovery nutrition'
-    }
+    'Fat Loss': {'desc': 'Fat-burning workouts with calorie deficit diet'},
+    'Muscle Gain': {'desc': 'Strength & hypertrophy focused program'},
+    'Athletic Performance': {'desc': 'Speed, agility & endurance training'}
 }
 
 @routes.route('/', methods=['GET','POST'])
