@@ -4,23 +4,23 @@ routes = Blueprint('routes', __name__)
 
 PROGRAMS = {
     'Fat Loss (FL)': {
-        'workout': 'Conditioning + Strength (4x/week)',
-        'diet': '2000-2200 kcal high-protein diet'
+        'workout': 'Fat‑loss focused conditioning + strength (4–5 days/week)',
+        'diet': 'High‑protein diet, 2000–2200 kcal/day'
     },
     'Muscle Gain (MG)': {
-        'workout': 'Hypertrophy split (5x/week)',
-        'diet': '3000-3300 kcal surplus nutrition'
+        'workout': 'Structured hypertrophy training split (5–6 days/week)',
+        'diet': 'Calorie surplus nutrition, 3000–3300 kcal/day'
     },
     'Beginner (BG)': {
-        'workout': 'Full body fundamentals (3x/week)',
-        'diet': 'Maintenance calories, balanced nutrition'
+        'workout': 'Introductory full‑body workouts (3 days/week)',
+        'diet': 'Balanced maintenance‑level nutrition'
     }
 }
 
 @routes.route('/', methods=['GET', 'POST'])
 def home():
-    details = None
+    selected = None
     if request.method == 'POST':
         program = request.form.get('program')
-        details = PROGRAMS.get(program)
-    return render_template('index.html', programs=PROGRAMS, details=details)
+        selected = PROGRAMS.get(program)
+    return render_template('index.html', programs=PROGRAMS, selected=selected)
